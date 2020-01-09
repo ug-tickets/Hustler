@@ -1,0 +1,34 @@
+ion-toolbar {
+    --background: transparent;
+    --ion-color-base: transparent !important;
+    --border-width: 0!important;
+    --border-color: transparent !important;
+}
+
+.header-md:after {
+    display: none !important;
+}
+
+ion-item {
+    padding-bottom: 15px;
+}
+
+.customtabs {
+    display: flex;
+    background-color: white;
+    padding: 20px 15px;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+.customtabs>div {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 30px;
+    color: rgb(204, 202, 202)
+}
+
+.customfooter {
+    bottom: -9px;
+}

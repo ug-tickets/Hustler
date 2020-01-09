@@ -1,9 +1,138 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>pendinggigs</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title></ion-title>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
+    <ion-segment scrollable (ionChange)="onFilter($event)">
+        <ion-segment-button value="pendingjobs" checked>Pending Gigs</ion-segment-button>
+        <ion-segment-button value="recenthustlers">Gigs Done</ion-segment-button>
+    </ion-segment>
+    <ion-list>
+        <div *ngIf="!RecentHustlers">
+            <ion-card>
+                <ion-card-content>
+
+
+                    <ion-item>
+
+                        <div style="display: flex; width: 100%; padding-top: 10px; padding-bottom: 5px;">
+                            <div style="flex:4">
+                                <div style="display: flex;">
+                                    <ion-avatar>
+                                        <ion-img src="../../assets/img/deno.jpg"></ion-img>
+                                    </ion-avatar>
+                                    <div style="margin-left: 10px; padding-top: 5px;">
+                                        <ion-label>UGTickets</ion-label>
+                                        <div style="font-size: 12px; color: rgb(80, 79, 79);">Event Flyer Design</div>
+                                        <div style="font-size: 11px; color: grey;">Tue 2 12:00</div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div style="flex:1">
+                                <div style="display: flex;">
+                                    <ion-button color="primary" fill="clear">
+                                        <ion-icon name="call"></ion-icon>
+                                    </ion-button>
+
+                                    <ion-button (click)="toGigDetails()" color="primary" fill="clear">
+                                        <ion-icon name="more"></ion-icon>
+                                    </ion-button>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </ion-item>
+                </ion-card-content>
+            </ion-card>
+        </div>
+        <div *ngIf="RecentHustlers">
+            <ion-card>
+                <ion-card-content>
+
+
+                    <ion-item (click)="toReviews()">
+
+                        <div style="display: flex; width: 100%; padding-top: 10px; padding-bottom: 5px;">
+                            <div style="flex:3">
+                                <div style="display: flex;">
+                                    <ion-avatar>
+                                        <ion-img src="../../assets/img/deno.jpg"></ion-img>
+                                    </ion-avatar>
+                                    <div style="margin-left: 10px; padding-top: 5px; padding-bottom: 5px;">
+                                        <ion-label>AFRICAD</ion-label>
+                                        <div style="font-size: 12px; color: grey;">Conference Poster</div>
+                                        <div style="font-size: 10px; color: grey;">Tue 2 Oct - Fri 10 Oct</div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div style="flex:1">
+                                <div style="font-weight: bold; text-align: center">30K</div>
+                                <ion-button color="primary">
+                                    100%</ion-button>
+                            </div>
+                        </div>
+
+
+
+                    </ion-item>
+
+                    <ion-item (click)="toReviews()">
+                        <div style="display: flex; width: 100%; padding-top: 10px; padding-bottom: 5px;">
+                            <div style="flex:4">
+                                <div style="display: flex;">
+                                    <ion-avatar>
+                                        <ion-img src="../../assets/img/deno.jpg"></ion-img>
+                                    </ion-avatar>
+                                    <div style="margin-left: 10px; padding-top: 5px; padding-bottom: 5px;">
+                                        <ion-label>Ang Graphics</ion-label>
+                                        <div style="font-size: 12px; color: grey;">Info. graphics</div>
+                                        <div style="font-size: 10px; color: grey;">Tue 2 Oct - Fri 10 Oct</div>
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div style="flex:1">
+                                <div style="font-weight: bold; text-align: center">80K</div>
+                                <ion-button color="primary">
+                                    100%</ion-button>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                </ion-card-content>
+            </ion-card>
+
+        </div>
+
+    </ion-list>
 
 </ion-content>
+<ion-footer class="customfooter">
+    <div class="customtabs">
+        <div>
+            <ion-icon name="home"></ion-icon>
+        </div>
+        <div>
+            <ion-icon name="contacts"></ion-icon>
+        </div>
+        <div>
+            <ion-icon name="chatbubbles"></ion-icon>
+        </div>
+        <div>
+            <ion-icon name="settings"></ion-icon>
+        </div>
+    </div>
+
+</ion-footer>
