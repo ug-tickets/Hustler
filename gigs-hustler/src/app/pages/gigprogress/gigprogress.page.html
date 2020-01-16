@@ -1,9 +1,45 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>gigprogress</ion-title>
-  </ion-toolbar>
+    <ion-toolbar color="primary">
+        <ion-buttons>
+            <ion-back-button slot="start"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Gig Progress</ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
+    <div class="jobbox">
+        <div class="indivjob">
+            <div class="gigname">Photoshoot Gig
+                <ion-button style="float: right; margin-top:-8px;" fill="clear">
+                    <ion-icon name="call" color="primary"></ion-icon>
+                </ion-button>
+            </div>
+            <div class="gigmeta">10-10-2020 10:00 to 10-10-2020 12:00</div>
+            <div class="progressbar"><span>3hrs 30min.</span>
+                <div style="width: 100%; padding-top: 5px;">
+                    <ion-progress-bar color="primary" value="0.5"></ion-progress-bar>
+                </div><span>50%</span></div>
+            <div class="reportprob">
+                <div class="reportdngr">Report Danger</div>
+
+
+            </div>
+            <div *ngIf="confirmit">
+                <ion-button expand="block" (click)="onConfirm()" color="primary">Confirm Extension</ion-button>
+
+            </div>
+        </div>
+
+        <div class="indivjob">
+            <div class="gigname">Gate manning Gig</div>
+            <div class="gigmeta">10-10-2020 10:00 to 10-10-2020 12:00</div>
+            <div class="progressbar"><span>3hrs 30min.</span>
+                <div style="width: 100%; padding-top: 5px;">
+                    <ion-progress-bar mode="ios" value="1"></ion-progress-bar>
+                </div><span>100%</span></div>
+        </div>
+
+    </div>
 
 </ion-content>

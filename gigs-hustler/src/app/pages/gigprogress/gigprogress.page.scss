@@ -1,0 +1,74 @@
+ion-content {
+    --ion-background-color: rgb(235, 235, 235);
+    padding: 10px;
+}
+
+.jobbox {
+    height: auto;
+    background: white;
+    margin: 10px;
+}
+
+.indivjob {
+    border-bottom: solid 1px rgb(235, 235, 235);
+    padding: 10px;
+    ;
+}
+
+.indivjob:last-child {
+    border: none;
+}
+
+.gigmeta {
+    font-size: 11px;
+    line-height: 25px;
+    color: rgb(187, 185, 185);
+}
+
+.gigname {
+    line-height: 25px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.progressbar {
+    display: flex;
+}
+
+.progressbar span {
+    width: auto;
+    font-size: 10px;
+    color: rgb(131, 129, 129);
+}
+
+.progressbar div {
+    flex: 1;
+    padding: 0 5px;
+}
+
+.reportdngr {
+    border-radius: 15px;
+    background-color: red;
+    color: white;
+    text-align: center;
+    width: 150px;
+    padding: 5px 0 7px 0;
+    font-size: 13px;
+    margin: 10px auto;
+}
+
+ion-list {
+    --ion-background-color: white;
+}
+
+ion-item {
+    border: none;
+}
+
+ion-alert div {
+    font-size: 10px;
+}
+
+ion-alert div[class='alert-button-inner'] {
+    font-size: 10px;
+}
